@@ -1,1 +1,27 @@
-<p>productos works!</p>
+<h2>Formulario de Cliente</h2>
+<div class="container mt-4">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text"  class="form-control" id="nombre" [(ngModel)]="producto.nombre" name="nombre" placeholder="Ingrese nombre" required>      
+    </div>
+
+    <div class="form-group">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" [(ngModel)]="producto.descripcion" name="descripcion" required>
+    </div>
+   
+
+    <div class="form-group">
+      <label for="categoriaProducto">Categoria Producto</label>
+      <select class="form-control" id="categoriaProducto" [(ngModel)]="producto.categoriaProducto" name="categoriaProducto" required>
+        <option value="NOPERECEDERO">NO PERECEDERO</option>
+        <option value="PELIGROSO"> PELIGROSO</option>
+        <option value="PERECEDERO">PERECEDERO</option>
+        <option value="SENSIBLE">SENSIBLE</option>
+      </select>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
