@@ -1,0 +1,33 @@
+<h2>Formulario de Cliente</h2>
+<div class="container mt-4">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text"  class="form-control" id="nombre" [(ngModel)]="cliente.nombre" name="nombre" placeholder="Ingrese nombre" required>
+      
+    </div>
+    <div class="form-group">
+      <label for="tipoDocumento">Tipo de Documento</label>
+      <select class="form-control" id="tipoDocumento" [(ngModel)]="cliente.tipoDocumento" name="tipoDocumento" required>
+        <option value="CC">Cédula de ciudadanía</option>
+        <option value="CC">Registro civil</option>
+        <option value="TI">Tarjeta de identidad</option>
+        <option value="CE">Cédula de extranjería</option>
+        <option value="NIT">NIT</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="documento">Número de Documento</label>
+      <input type="text" class="form-control" id="documento" [(ngModel)]="cliente.documento" name="documento" required>
+    </div>
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" class="form-control" id="direccion" [(ngModel)]="cliente.direccion" name="direccion" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="cliente.email" name="email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
