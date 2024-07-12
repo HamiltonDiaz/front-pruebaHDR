@@ -9,13 +9,19 @@ import { LoginComponent } from './components/login/login.component';
 import { ClienteFormComponent } from './components/cliente-form/cliente-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { ProductosComponent } from './components/productos/productos.component';
+import { BodegasComponent } from './components/bodegas/bodegas.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ClienteFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductosComponent,
+    BodegasComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

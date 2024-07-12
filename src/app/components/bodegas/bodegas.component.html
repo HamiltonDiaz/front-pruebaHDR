@@ -1,0 +1,45 @@
+<h2>Formulario de Cliente</h2>
+<div class="container mt-4">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text"  class="form-control" id="nombre" [(ngModel)]="bodega.nombre" name="nombre" placeholder="Ingrese nombre" required>      
+    </div>
+
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" id="direccion" [(ngModel)]="bodega.direccion" name="direccion" required>
+    </div>
+    <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" [(ngModel)]="bodega.ciudad" name="ciudad" required>
+    </div>
+    <div class="form-group">
+        <label for="estado">Estado/Departamento</label>
+        <input type="text" class="form-control" id="estado" [(ngModel)]="bodega.estado" name="estado" required>
+    </div>
+    <div class="form-group">
+        <label for="pais">País</label>
+        <input type="text" class="form-control" id="pais" [(ngModel)]="bodega.pais" name="pais" required>
+    </div>
+    <div class="form-group">
+        <label for="codigoPostal">Código postal</label>
+        <input type="text" class="form-control" id="codigoPostal" [(ngModel)]="bodega.codigoPostal" name="codigoPostal" required>
+    </div>
+
+    <div class="form-group">
+        <label for="capacidadAlmacenamiento">Capacidad Almacenamiento</label>
+        <input type="number" class="form-control" id="capacidadAlmacenamiento" [(ngModel)]="bodega.capacidadAlmacenamiento" name="capacidadAlmacenamiento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tipoBodega">Tipo de bodega</label>
+      <select class="form-control" id="tipoBodega" [(ngModel)]="bodega.tipoBodega" name="tipoBodega" required>
+        <option value="MARITIMA">MARITIMA</option>
+        <option value="TERRESTRE">TERRESTRE</option>
+      </select>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
